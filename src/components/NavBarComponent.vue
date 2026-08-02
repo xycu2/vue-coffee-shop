@@ -12,7 +12,7 @@
         <router-link  to="/our-coffee">Our coffee</router-link>
       </li>
       <li class="header__item">
-        <a href="./goodspage.html">For your pleasure</a>
+        <router-link to="for-pleasure">For your pleasure</router-link>
       </li>
       <li class="header__item">
         <a href="./contacts.html">Contact us</a>
