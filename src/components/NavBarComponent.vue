@@ -15,7 +15,7 @@
         <router-link to="for-pleasure">For your pleasure</router-link>
       </li>
       <li class="header__item">
-        <a href="./contacts.html">Contact us</a>
+        <router-link to="contact-us">Contact us</router-link>
       </li>
     </ul>
   </header>
