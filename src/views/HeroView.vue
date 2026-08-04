@@ -47,9 +47,9 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="best__wrapper">
-                            <product-card />
-                            <product-card />
-                            <product-card />
+                            <product-card classItem="best__item" :text="cards[0].text" :icon="cards[0].icon" :price="cards[0].price"/>
+                            <product-card classItem="best__item" :text="cards[1].text" :icon="cards[1].icon" :price="cards[1].price"/>
+                            <product-card classItem="best__item" :text="cards[2].text" :icon="cards[2].icon" :price="cards[2].price"/>
                         </div>
                     </div>
                 </div>
@@ -72,19 +72,19 @@ export default {
                     id: 0,
                     text: 'Solimo Coffee Beans 2kg',
                     icon: 'coffee-1.jpg',
-                    price: '10.73$',
+                    price: 10.73,
                 },
                 {
                     id: 1,
                     text: 'Presto Coffee Beans 1kg',
                     icon: 'coffee-2.jpg',
-                    price: '15.99$',
+                    price: 15.99,
                 },
                 {
                     id: 2,
                     text: 'AROMISTICO Coffee 1kg',
                     icon: 'coffee-3.jpg',
-                    price: '6.99$',
+                    price: 6.99,
                 }
             ]
         }
