@@ -36,12 +36,16 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="shop__wrapper">
-                            <product-card classItem="shop__item" :text="cards[0].text" :icon="cards[0].icon" :price="cards[0].price"/>
-                            <product-card classItem="shop__item" :text="cards[1].text" :icon="cards[1].icon" :price="cards[1].price"/>
-                            <product-card classItem="shop__item" :text="cards[2].text" :icon="cards[2].icon" :price="cards[2].price"/>
-                            <product-card classItem="shop__item" :text="cards[3].text" :icon="cards[3].icon" :price="cards[3].price"/>
-                            <product-card classItem="shop__item" :text="cards[4].text" :icon="cards[4].icon" :price="cards[4].price"/>
-                            <product-card classItem="shop__item" :text="cards[5].text" :icon="cards[5].icon" :price="cards[5].price"/>
+                
+                            <product-card 
+                                v-for="card in cards"
+                                :key="card.id"
+                                classItem="shop__item" 
+                                :text="card.text" 
+                                :icon="card.icon" 
+                                :price="card.price">
+                            </product-card>
+                
                         </div>
                     </div>
                 </div>
