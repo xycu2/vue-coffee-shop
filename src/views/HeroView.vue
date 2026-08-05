@@ -47,9 +47,14 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="best__wrapper">
-                            <product-card classItem="best__item" :text="cards[0].text" :icon="cards[0].icon" :price="cards[0].price"/>
-                            <product-card classItem="best__item" :text="cards[1].text" :icon="cards[1].icon" :price="cards[1].price"/>
-                            <product-card classItem="best__item" :text="cards[2].text" :icon="cards[2].icon" :price="cards[2].price"/>
+                            <product-card
+                                v-for="card in cards"
+                                :key="card.id" 
+                                classItem="best__item" 
+                                :text="card.text" 
+                                :icon="card.icon" 
+                                :price="card.price">
+                            </product-card>
                         </div>
                     </div>
                 </div>
