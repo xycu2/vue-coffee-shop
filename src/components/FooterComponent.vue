@@ -4,14 +4,25 @@
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <ul class="footer d-flex flex-wrap">
-            <li class="footer__item">
-              <router-link :to="links[0].link">
-                <img :src="require(`@/assets/logo/${links[0].icon}`)" :alt="links[0].icon" />
-              </router-link>
-            </li>
-            <link-component classItem="footer__item" :path="links[1].link" :text="links[1].text" />
-            <link-component classItem="footer__item" :path="links[2].link" :text="links[2].text" />
-            <link-component classItem="footer__item" :path="links[3].link" :text="links[3].text" />
+
+            <link-component
+              :path="links.header.link"
+              classItem="footer__item"
+            >
+              <img 
+                  :src="require(`@/assets/logo/${links.header.icon}`)" 
+                  :alt="links.header.icon" 
+              />
+            </link-component>
+
+            <link-component
+              v-for="link in links.other"
+              :key="link.id"
+              classItem="footer__item" 
+              :path="link.link" 
+              :text="link.text">
+            </link-component>
+              
           </ul>
         </div>
       </div>
@@ -31,12 +42,13 @@ export default {
   components: {LinkComponent},
   data() {
     return {
-      links: [
-        {
+      links: {
+        header: {
           id: 0,
           link: '/',
           icon: 'Logo_black.svg'
         },
+        other: [
         {
           id: 1,
           text: 'Our coffee',
@@ -53,6 +65,7 @@ export default {
           link: 'contact-us',
         }
       ]
+      }
     }
   }
 }
