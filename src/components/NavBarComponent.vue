@@ -16,8 +16,7 @@
         :key="link.id"
         classItem="header__item"
         :path="link.link"
-        :text="link.text"
-      >
+        :text="link.text">
       </link-component>
 
     </ul>
