@@ -26,7 +26,7 @@
                                     </label>
                                 </div>
                                 <div class="col col-12 col-sm-9">
-                                    <input type="text" class="form-control" id="name-input">
+                                    <input type="text" class="form-control" id="name-input" v-model="form.name">
                                 </div>
                             </div>
     
@@ -38,7 +38,7 @@
                                     </label>
                                 </div>
                                 <div class="col col-12 col-sm-9">
-                                    <input type="email" class="form-control" id="email-input">
+                                    <input type="email" class="form-control" id="email-input" v-model="form.email">
                                 </div>
                             </div>
     
@@ -49,7 +49,7 @@
                                     </label>
                                 </div>
                                 <div class="col col-12 col-sm-9">
-                                    <input type="tel" class="form-control" id="phone-input">
+                                    <input type="tel" class="form-control" id="phone-input" v-model="form.phone">
                                 </div>
                             </div>
     
@@ -61,7 +61,7 @@
                                     </label>
                                 </div>
                                 <div class="col col-12">
-                                    <textarea class="form-control" name="message" id="message" rows="5"
+                                    <textarea class="form-control" name="message" id="message" rows="5" v-model="form.inputText"
                                         placeholder="Leave your comments here"></textarea>
                                 </div>
                             </div>
@@ -84,6 +84,17 @@ import NavBarComponent from '../components/NavBarComponent.vue'
 import TitleHeaderComponent from '../components/TitleHeaderComponent.vue';
 
 export default {
-    components: {NavBarComponent, TitleHeaderComponent}
+    components: {NavBarComponent, TitleHeaderComponent},
+    data() {
+        return {
+            form: {
+                    id: 0,
+                    name: 'Demid',
+                    email: 'server@gmail.com',
+                    phone: '+799900012212',
+                    inputText: 'Hello, how are you'
+            }
+        }
+    }
 }
 </script>
